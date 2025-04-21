@@ -9,3 +9,6 @@ class AITestGenerator(ABC):
         prompt_file = self.prompts_dir/f'{prompt_type}.md'
         return prompt_file.read_text(encoding='utf-8')
 
+    @abstractmethod
+    def generate_test(self, description: str, context: str = None) -> str:
+        pass
