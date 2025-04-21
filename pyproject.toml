@@ -1,0 +1,18 @@
+[project]
+name = "qaqa-core"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "L4m4w",email = "l4p41@yandex.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "openai (>=1.75.0,<2.0.0)",
+    "pytest (>=8.3.5,<9.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
