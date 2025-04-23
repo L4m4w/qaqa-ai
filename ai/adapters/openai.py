@@ -1,3 +1,5 @@
+from pyexpat.errors import messages
+
 from openai import OpenAI
 from ai.core.generator import AITestGenerator
 
@@ -12,3 +14,10 @@ class OpenAITestGenerator(AITestGenerator):
                 description=description,
                 context=context or ""
             )
+
+            response = self.client.chat.completions.create(
+                model = self.model,
+                messages=[{'role': "user", "content": prompt}],
+                temperature=0.3
+            )
+            return response.choices[0].message.content
