@@ -5,7 +5,7 @@ from typing import Tuple
 
 
 class AITestGenerator(ABC):
-    def __init__(self, prompts_dir: str = 'prompts'):
+    def __init__(self, prompts_dir = 'prompts'):
         self.prompts_dir = Path(prompts_dir)
 
     def load_prompt(self, prompt_type: str) -> str:
