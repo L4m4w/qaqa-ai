@@ -1,5 +1,5 @@
 from unittest.mock import Mock, patch
-from ai.adapters.openai import OpenAITestGenerator
+from ai.adapters.openai_adapter import OpenAITestGenerator
 
 
 def test_openai_generation():
@@ -12,7 +12,7 @@ def test_openai_generation():
     mock_response.choices = [mock_choice]
 
     # 2. Мокаем именно то место, где импортируется OpenAI
-    with patch('ai.adapters.openai.OpenAI') as mock_openai:
+    with patch('ai.adapters.openai_adapter.OpenAI') as mock_openai:
         # 3. Настраиваем мок-клиент
         mock_client = Mock()
         mock_openai.return_value = mock_client
