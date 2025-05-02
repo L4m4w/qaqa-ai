@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from ai.adapters.mistral_adapters import MistralAITestGenerator
+from ai.adapters.mistral_adapter import MistralAITestGenerator
 
 from config import settings
 

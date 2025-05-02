@@ -6,6 +6,10 @@
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://python.org)
 [![Pydantic](https://img.shields.io/badge/Pydantic-v2-brightgreen)](https://pydantic.dev)
 [![License](https://img.shields.io/badge/License-MIT-purple)](LICENSE)
+![Free](https://img.shields.io/badge/free-open--source-green.svg)
+
+
+[![Join telegram chat https://t.me/qa_ai_ru](https://img.shields.io/badge/chat-telegram-blue)](https://t.me/qa_ai_ru)
 
 # Умная валидация:
  - Проверка синтаксиса
