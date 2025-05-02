@@ -13,10 +13,10 @@ def find_project_root():
 PROJECT_ROOT = find_project_root()
 
 class AISettings(BaseSettings):
-    openai_api_key : SecretStr = None
+    openai_api_key : str
     openai_model: str = "gpt-3.5-turbo"
 
-    mistral_api_key : SecretStr = None
+    mistral_api_key : str
     mistral_model : str = "mistral-large-latest"
 
     local_model_path: str = "models/llama-3-8b.gguf"
