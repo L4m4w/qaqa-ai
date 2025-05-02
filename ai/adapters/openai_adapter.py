@@ -6,7 +6,7 @@ from openai import OpenAI
 from ai.core.generator import AITestGenerator
 
 class OpenAITestGenerator(AITestGenerator):
-    def __init__(self, api_key: str, model: str = "gpt-4-turbo"):
+    def __init__(self, api_key: str, model: str = "gpt-3.5-turbo"):
         base_dir = Path(os.path.dirname(os.path.abspath(__file__))).parent
         super().__init__(prompts_dir=base_dir / "prompts")
         self.client = OpenAI(api_key=api_key)
