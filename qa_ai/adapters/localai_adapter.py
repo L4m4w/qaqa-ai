@@ -1,5 +1,5 @@
 from llama_cpp import Llama
-from ai.core.generator import AITestGenerator
+from qa_ai.core.generator import AITestGenerator
 
 
 class LocalAITestGenerator(AITestGenerator):

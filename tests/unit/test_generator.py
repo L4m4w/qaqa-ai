@@ -1,6 +1,6 @@
 import pytest
-from ai.core.generator import AITestGenerator
-from ai.adapters.openai_adapter import OpenAITestGenerator
+from qa_ai.core.generator import AITestGenerator
+from qa_ai.adapters.openai_adapter import OpenAITestGenerator
 
 class MockGenerator(AITestGenerator):
     """

@@ -1,10 +1,12 @@
 [project]
-name = "qaqa-core"
+name = "qa_ai"
 version = "0.1.0"
 description = ""
 authors = [
     {name = "L4m4w",email = "l4p41@yandex.com"}
 ]
+[tool.setuptools]
+packages = ["qa_ai"]
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [

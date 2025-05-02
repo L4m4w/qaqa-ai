@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from ai.adapters.mistral_adapter import MistralAITestGenerator
+from qa_ai.adapters.mistral_adapter import MistralAITestGenerator
 
 from config import settings
 
@@ -17,7 +17,7 @@ generator = MistralAITestGenerator(
 # Описываем тест на естественном языке
 test_code = generator.generate_test(
     description="Проверить логин с валидными данными",
-    prompt_type="web/login",  # Использует шаблон из ai/prompts/web/login.md
+    prompt_type="web/login",  # Использует шаблон из qa_ai/prompts/web/login.md
     context="LoginPage: #username, #password, #submit"
 )
 

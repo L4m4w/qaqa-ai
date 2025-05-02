@@ -1,19 +1,18 @@
-from mistralai import Mistral
 import os
 from pathlib import Path
 
-from ai.core.generator import AITestGenerator
-from config import settings
+from openai import OpenAI
+from qa_ai.core.generator import AITestGenerator
 
-class MistralAITestGenerator(AITestGenerator):
-    def __init__(self, api_key, model: str = "mistral-tiny"):
+class OpenAITestGenerator(AITestGenerator):
+    def __init__(self, api_key: str, model: str = "gpt-3.5-turbo"):
         base_dir = Path(os.path.dirname(os.path.abspath(__file__))).parent
         super().__init__(prompts_dir=base_dir / "prompts")
-        self.client = Mistral(api_key=api_key)
+        self.client = OpenAI(api_key=api_key)
         self.model = model
 
     def load_prompt(self, prompt_type: str) -> str:
-        """Загружает шаблон из ai/prompts/"""
+        """Загружает шаблон из qa_ai/prompts/"""
         # Добавляем .md, если нет расширения
         if not prompt_type.endswith('.md'):
             prompt_type += '.md'
@@ -36,23 +35,9 @@ class MistralAITestGenerator(AITestGenerator):
             context=context or ""
         )
 
-        chat_response = self.client.chat.complete(
-            model=self.model,
-            messages=[
-                {
-                    "role": "user",
-                    "content": prompt,
-                },
-            ]
+        response = self.client.chat.completions.create(
+            model = self.model,
+            messages=[{'role': "user", "content": prompt}],
+            temperature=0.3
         )
-        print(self.clean_code_response(chat_response.choices[0].message.content))
-
-        return self.clean_code_response(chat_response.choices[0].message.content)
-
-    def clean_code_response(self, response: str) -> str:
-        """Удаляет Markdown-разметку кода"""
-        if response.startswith("```python") and response.endswith("```"):
-            return response[9:-3].strip()
-        elif response.startswith("```") and response.endswith("```"):
-            return response[3:-3].strip()
-        return response
+        return response.choices[0].message.content
