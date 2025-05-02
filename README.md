@@ -44,7 +44,7 @@ generator.generate_test("Проверка логина", type="web")
 *Установка*
 bash
 ```bash
-pip install qa-ai-framework
+pip install qa_ai
 ```
 **Пример использования**
 ```python

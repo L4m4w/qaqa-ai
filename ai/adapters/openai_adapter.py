@@ -1,6 +1,5 @@
 import os
 from pathlib import Path
-from pyexpat.errors import messages
 
 from openai import OpenAI
 from ai.core.generator import AITestGenerator
