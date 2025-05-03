@@ -9,7 +9,6 @@
 ![Free](https://img.shields.io/badge/free-open--source-green.svg)
 [![PyPI](https://img.shields.io/badge/PyPI-package-blue?logo=pypi&logoColor=white)](https://pypi.org/project/qa-ai/)
 [![Version](https://img.shields.io/pypi/v/qa-ai?color=orange)](https://pypi.org/project/qa-ai/)
-[![Python](https://img.shields.io/pypi/pyversions/qa-ai)](https://pypi.org/project/qa-ai/)
 
 [![Join telegram chat https://t.me/qa_ai_ru](https://img.shields.io/badge/chat-telegram-blue)](https://t.me/qa_ai_ru)
 
