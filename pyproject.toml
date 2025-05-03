@@ -1,12 +1,15 @@
 [project]
-name = "qa_ai"
-version = "0.1.0"
-description = ""
+name = "qa-ai"
+version = "0.2.5"
+description = "AI-powered test automation framework"
+readme = "README.md"
+long_description = {file = ["README.md"]}
+long_description_content_type = "text/markdown"
 authors = [
     {name = "L4m4w",email = "l4p41@yandex.com"}
 ]
 [tool.setuptools]
-packages = ["qa_ai"]
+packages = [{ include = "qa_ai" }]
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [

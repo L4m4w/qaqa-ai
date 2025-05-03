@@ -7,7 +7,9 @@
 [![Pydantic](https://img.shields.io/badge/Pydantic-v2-brightgreen)](https://pydantic.dev)
 [![License](https://img.shields.io/badge/License-MIT-purple)](LICENSE)
 ![Free](https://img.shields.io/badge/free-open--source-green.svg)
-
+[![PyPI](https://img.shields.io/badge/PyPI-package-blue?logo=pypi&logoColor=white)](https://pypi.org/project/qa-ai/)
+[![Version](https://img.shields.io/pypi/v/your-package-name?color=orange)](https://pypi.org/project/qa-ai/)
+[![Python](https://img.shields.io/pypi/pyversions/your-package-name)](https://pypi.org/project/qa-ai/)
 
 [![Join telegram chat https://t.me/qa_ai_ru](https://img.shields.io/badge/chat-telegram-blue)](https://t.me/qa_ai_ru)
 
